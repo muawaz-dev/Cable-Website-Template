@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Hikvision CCTV Security Camera Installation Denver CO | Harden Communications",
+  title: "Hikvision CCTV Security Camera Installation Denver CO | [Your Company]",
   description:
     "Professional Hikvision CCTV security camera installation in Denver CO and the Front Range. IP cameras, analog systems, and complete surveillance solutions for businesses. Call (303) 668-5150.",
   keywords: [
@@ -52,7 +52,7 @@ export default function SecurityPage() {
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
       <section
-        className="relative bg-gray-900 min-h-[220px] flex items-end overflow-hidden"
+        className="relative bg-red-900 min-h-[220px] flex items-end overflow-hidden"
         aria-label="Hikvision CCTV Security Camera Installation Denver CO"
       >
         <div
@@ -69,18 +69,21 @@ export default function SecurityPage() {
         </div>
       </section>
 
+
       {/* ── SECTION 2: Overview ───────────────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto px-6 py-14" aria-label="Hikvision Security Camera Overview">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <section className="max-w-7xl bg-white mx-auto px-6 py-14" aria-label="Hikvision Security Camera Overview">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-start">
           {/* Left: Image */}
-          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-200 h-72">
-            <Image
-              src="/images/hikvision-camera.jpg"
-              alt="Hikvision CCTV security camera installed in Denver business"
-              className="w-full h-full object-cover"
-              loading="lazy"
-              fill
-            />
+          <div className="rounded-xl flex justify-center items-center overflow-hidden h-full">
+            <div className="shadow-lg bg-gray-100 rounded-xl relative h-96 w-full" >
+              <Image
+                src="/services/hikvision-camera.png"
+                alt="Security cameras, headset, network cables — [Your Company] products"
+                className="w-full h-full object-cover rounded-xl"
+                loading="lazy"
+                fill
+              />
+            </div>
           </div>
 
           {/* Right: Text */}
@@ -88,29 +91,31 @@ export default function SecurityPage() {
             <p className="text-purple-600 text-sm font-semibold uppercase tracking-widest mb-2">
               Hikvision Authorized Partner | Denver CO &amp; Front Range
             </p>
-            <h2 className="text-3xl font-black text-gray-900 mb-5 uppercase leading-tight">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-5 uppercase leading-tight">
               HIKVISION CCTV SECURITY CAMERA INSTALLATION
             </h2>
 
-            <p className="text-gray-700 text-sm leading-relaxed mb-4">
-              Protect your business, employees, and assets with professional-grade surveillance systems from Hikvision — the world's leading CCTV manufacturer. Harden Communications is a certified Hikvision installation partner serving Denver CO and the Front Range.
+            <p className="text-gray-700 text-md leading-relaxed mb-4">
+              Protect your business, employees, and assets with professional-grade surveillance systems from Hikvision — the world's leading CCTV manufacturer. [Your Company] is a certified Hikvision installation partner serving Denver CO and the Front Range.
             </p>
-            <p className="text-gray-700 text-sm leading-relaxed mb-4">
+            <p className="text-gray-700 text-md leading-relaxed mb-4">
               Whether you need a single camera for a small office or a comprehensive multi-site surveillance network, we design, install, and support systems that deliver crystal-clear video, remote access, and long-term reliability.
             </p>
-            <p className="text-gray-700 text-sm leading-relaxed">
+            <p className="text-gray-700 text-md leading-relaxed">
               We offer <strong>CCTV, IP, and Hikvision</strong> solutions tailored to your specific security needs and budget. Every installation is clean, organized, and fully tested before we leave the job site.
             </p>
           </div>
         </div>
       </section>
 
+
+
       {/* ── SECTION 3: Features Grid ──────────────────────────────────────── */}
       <section className="bg-gray-50 py-16 px-6" aria-label="CCTV Security Camera Features">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-black text-gray-900 mb-3 text-center">Why Choose Hikvision CCTV?</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3 text-center">Why Choose Hikvision CCTV?</h2>
           <p className="text-gray-500 text-sm text-center mb-10 max-w-xl mx-auto">
-            Industry-leading cameras backed by expert installation from Harden Communications.
+            Industry-leading cameras backed by expert installation from [Your Company].
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -120,12 +125,12 @@ export default function SecurityPage() {
                 className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               >
                 <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-8 h-8 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2 text-sm">{feature.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{feature.description}</p>
+                <h3 className="font-bold text-gray-900 mb-2 text-xl">{feature.title}</h3>
+                <p className="text-gray-600 text-md leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -133,10 +138,10 @@ export default function SecurityPage() {
       </section>
 
       {/* ── SECTION 4: Contact CTA ─────────────────────────────────────────── */}
-      <section className="py-12 px-6 flex justify-end max-w-7xl mx-auto" aria-label="Contact Harden Communications for Security">
+      <section className="py-12 px-6 flex justify-end max-w-7xl mx-auto" aria-label="Contact [Your Company] for Security">
         <Link
           href="/contact"
-          className="bg-purple-700 hover:bg-purple-800 text-white font-black px-10 py-4 rounded-full text-lg transition-colors"
+          className="bg-purple-700 mx-auto hover:bg-purple-800 text-white font-black px-10 py-4 rounded-full text-lg transition-colors"
         >
           CONTACT US
         </Link>

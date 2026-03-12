@@ -10,14 +10,13 @@ import { usePathname } from "next/navigation";
 const serviceLinks = [
   { label: "Cable Installation", href: "/services/cable-installation" },
   { label: "Security", href: "/services/security" },
-  { label: "Avaya IP Office", href: "/services/avaya-ip-office" },
+  { label: "Avaya IP Office", href: "/services/avaya-ip" },
 ];
 
 // ─── Main nav links ───────────────────────────────────────────────────────────
 const navLinks = [
   { label: "HOME", href: "/" },
-  { label: "ABOUT US", href: "/about" },
-  { label: "Blog", href: "/blog" },
+  { label: "ABOUT US", href: "/about" }
 ];
 
 export default function Navbar() {
@@ -92,10 +91,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2" aria-label="Harden Communications Home">
             <div className="bg-purple-800 text-white font-black text-xl px-3 py-1 rounded-sm tracking-tight">
-              HARDEN
+              Your
             </div>
             <span className="text-xs text-gray-500 leading-tight hidden sm:block">
-              COMMUNICATIONS
+              Logo
             </span>
           </Link>
 
@@ -175,34 +174,10 @@ export default function Navbar() {
                 ABOUT US
               </Link>
             </li>
-
-            {/* Blog */}
-            <li role="none">
-              <Link
-                href="/blog"
-                className={`px-4 py-2 text-sm font-semibold tracking-wide transition-colors ${
-                  pathname === "/blog" ? "text-purple-700 border-b-2 border-purple-700" : "text-gray-700 hover:text-purple-700"
-                }`}
-                role="menuitem"
-              >
-                Blog
-              </Link>
-            </li>
           </ul>
 
           {/* Search + CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <div className="relative">
-              <input
-                type="search"
-                placeholder="Search..."
-                className="pl-3 pr-8 py-1.5 text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent w-40"
-                aria-label="Search"
-              />
-              <svg className="absolute right-2.5 top-2 w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
             <Link
               href="/contact"
               className="bg-purple-700 hover:bg-purple-800 text-white text-sm font-bold px-5 py-2 rounded-full flex items-center gap-1.5 transition-colors"

@@ -6,10 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Harden Communications | Structured Cabling, Security Cameras & VoIP Denver CO",
+  title: "[Your Company] | Structured Cabling, Security Cameras & VoIP Denver CO",
   description:
     "Serving Denver CO & the Front Range. Professional structured cabling (Cat5e/Cat6/Fiber), Hikvision CCTV security camera installation, and Avaya IP Office VoIP phone systems. Call (303) 668-5150.",
-  alternates: { canonical: "https://hardencommunications.com" },
+  alternates: { canonical: "https://[Your Company]communications.com" },
 };
 
 // ─── Service Card Data ────────────────────────────────────────────────────────
@@ -53,7 +53,7 @@ const serviceCards = [
 const whyChooseUs = [
   {
     title: "Experience YOU Can Trust",
-    body: "With industry-leading certifications and years of hands-on expertise, Harden Communications brings proven knowledge in structured network cabling, surveillance systems, and VoIP phone solutions. We understand what your business needs — and we install it right the first time.",
+    body: "With industry-leading certifications and years of hands-on expertise, [Your Company] brings proven knowledge in structured network cabling, surveillance systems, and VoIP phone solutions. We understand what your business needs — and we install it right the first time.",
     accent: "YOU",
   },
   {
@@ -115,48 +115,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SECTION 2: Service Cards ──────────────────────────────────────── */}
-      <section
-        className="max-w-7xl mx-auto px-6 -mt-16 relative z-10 bg-white"
-        aria-label="Our Services"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {serviceCards.map((card) => (
-            <Link
-              key={card.href}
-              href={card.href}
-              className="bg-white rounded-xl shadow-lg p-7 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-200 group"
-              aria-label={`Learn about ${card.title}`}
-            >
-              {/* Icon Circle */}
-              <div className="w-16 h-16 rounded-full bg-purple-700 flex items-center justify-center mb-5 group-hover:bg-purple-800 transition-colors">
-                {card.icon}
-              </div>
-              <h2 className="text-xl font-bold text-gray-900 mb-3 uppercase leading-tight">
-                {card.title}
-              </h2>
-              {/* Divider */}
-              <div className="w-10 h-0.5 bg-purple-600 mb-3" aria-hidden="true" />
-              <p className="text-sm text-gray-500 uppercase tracking-wide">{card.subtitle}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
+     
+        {/* ── SECTION 2: Service Cards ──────────────────────────────────────── */}
+        <section
+          className="max-w-7xl mx-auto px-6 -mt-16 relative z-10 bg-white"
+          aria-label="Our Services"
+        >
 
-      {/* ── SECTION 3: Mission Statement ────────────────────────────────── */}
-      <section className="max-w-7xl bg-white mx-auto px-6 py-16" aria-label="Our Mission">
-        <p className="text-xl font-bold text-gray-900 mb-4 leading-relaxed">
-          At Harden Communications, our mission is simple: deliver reliable, secure, and future-ready communication
-          solutions that keep your business connected, protected, and running at peak performance.
-        </p>
-        <p className="text-gray-600 text-md leading-relaxed">
-          We believe every business — large or small — deserves world-class structured cabling, professional-grade security systems, and crystal-clear VoIP communications.
-          Our commitment is to provide honest guidance, precision installation, and dependable support you can trust day after day.
-        </p>
-      </section>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {serviceCards.map((card) => (
+              <Link
+                key={card.href}
+                href={card.href}
+                className="bg-white rounded-xl shadow-lg p-7 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-200 group"
+                aria-label={`Learn about ${card.title}`}
+              >
+                {/* Icon Circle */}
+                <div className="w-16 h-16 rounded-full bg-purple-700 flex items-center justify-center mb-5 group-hover:bg-purple-800 transition-colors">
+                  {card.icon}
+                </div>
+                <h2 className="text-xl font-bold text-gray-900 mb-3 uppercase leading-tight">
+                  {card.title}
+                </h2>
+                {/* Divider */}
+                <div className="w-10 h-0.5 bg-purple-600 mb-3" aria-hidden="true" />
+                <p className="text-sm text-gray-500 uppercase tracking-wide">{card.subtitle}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ── SECTION 3: Mission Statement ────────────────────────────────── */}
+        <section className="max-w-7xl bg-white mx-auto px-6 py-16" aria-label="Our Mission">
+          <p className="text-xl font-extrabold text-gray-900 mb-4 leading-relaxed">
+            At [Your Company], our mission is simple: deliver reliable, secure, and future-ready communication
+            solutions that keep your business connected, protected, and running at peak performance.
+          </p>
+          <p className="text-gray-600 text-md leading-relaxed">
+            We believe every business — large or small — deserves world-class structured cabling, professional-grade security systems, and crystal-clear VoIP communications.
+            Our commitment is to provide honest guidance, precision installation, and dependable support you can trust day after day.
+          </p>
+        </section>
+    
+
 
       {/* ── SECTION 4: Why Choose Us ──────────────────────────────────────── */}
-      <section className="bg-gray-50 py-16" aria-label="Why Choose Harden Communications">
+      <section className="bg-gray-50 py-16" aria-label="Why Choose [Your Company]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left: Images */}
@@ -220,14 +224,14 @@ export default function HomePage() {
                 <a
                   href="tel:3036685150"
                   className="flex items-center gap-2 text-gray-700 hover:text-purple-700 transition-colors font-semibold"
-                  aria-label="Call Harden Communications"
+                  aria-label="Call [Your Company]"
                 >
                   <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   <span>
                     <span className="text-xs text-gray-500 block">Call for free</span>
-                    303-668-5150
+                    999-999-9999
                   </span>
                 </a>
               </div>
