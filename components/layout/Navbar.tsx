@@ -6,7 +6,6 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { log } from "console";
 // ─── Service sub-menu items ───────────────────────────────────────────────────
 const serviceLinks = [
   { label: "Cable Installation", href: "/services/cable-installation" },
@@ -37,9 +36,9 @@ export default function Navbar() {
   };
 
   return (
-    <header className="w-full fade-in sticky top-0 z-50 shadow-md">
+    <header className="w-full bg-white sticky top-0 z-50 shadow-md">
       {/* ── Top Info Bar ─────────────────────────────────────────────────── */}
-      <div className="bg-gray-900 text-white text-sm py-2 px-4">
+      <div className="bg-gray-900 fade-in text-white text-sm py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-6">
             {/* Email */}
@@ -88,7 +87,7 @@ export default function Navbar() {
       </div>
 
       {/* ── Main Navbar ───────────────────────────────────────────────────── */}
-      <nav className="bg-white h-22 sm:h-26 border-b border-gray-200" role="navigation" aria-label="Main navigation">
+      <nav className="bg-white fade-in h-22 sm:h-26 border-b border-gray-200" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto pr-4 flex items-center justify-between h-full">
           {/* Logo */}
           <Link href="/" className="flex relative h-full w-64 items-center gap-2" aria-label="Harden Communications Home">

@@ -40,7 +40,7 @@ const avayaFeatures: Feature[] = [
     body: "Avaya IP Office keeps your team connected no matter where they are, offering real-time collaboration across both mobile devices and desktop computers. Employees can join calls, share messages, access voicemail, and manage communication tools from anywhere—whether they’re in the office, working remotely, or on the go. This seamless mobility ensures faster response times, smoother teamwork, and uninterrupted productivity. With unified communication features built directly into the platform, your business stays agile, responsive, and fully connected at all times."
   },
   {
-    id: "conference",
+    id: "track-calls",
     title: "Track, record, & report calls on a large scale",
     body: "Avaya IP Office gives your business powerful tools to manage call activity with precision and insight. Easily track incoming and outgoing calls, record conversations for training or compliance, and generate detailed reports that highlight performance trends across your entire organization. Whether you manage a high-volume call environment or simply want better visibility into daily communication, Avaya IP Office delivers enterprise-level analytics that help improve service, strengthen accountability, and enhance customer experience. It’s a smart, scalable solution for businesses that rely on clear, measurable communication data."
   },

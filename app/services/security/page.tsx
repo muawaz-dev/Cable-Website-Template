@@ -69,6 +69,7 @@ export default function SecurityPage() {
         </div>
       </section>
 
+      <div className="bg-white">
 
       {/* ── SECTION 2: Overview ───────────────────────────────────────────── */}
       <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="Hikvision Security Camera Overview">
@@ -139,6 +140,7 @@ export default function SecurityPage() {
       {/* ── SECTION 4: Home Accordion ──────────────────────────────────────── */}
 
       <HomeAccordion />
+      </div>
 
       {/* ── SECTION 5: Features Grid ──────────────────────────────────────── */}
       <section className="bg-gray-50 py-16 px-6" aria-label="CCTV Security Camera Features">

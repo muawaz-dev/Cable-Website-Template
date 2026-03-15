@@ -44,6 +44,8 @@ export default function AvayaIPOfficePage() {
         </div>
       </section>
 
+      <div className="bg-white">
+
       {/* ── SECTION 2: Sales & Support Overview ──────────────────────────── */}
       <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="Avaya IP Office Sales & Support">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -120,6 +122,7 @@ export default function AvayaIPOfficePage() {
 
       {/* ── SECTION 4: Features Accordion ─────────────────────────────────── */}
         <Accordian />
+      </div>
       {/* ── SECTION 5: Contact CTA ─────────────────────────────────────────── */}
       <CtaBanner/>
     </>

@@ -2,8 +2,9 @@
 // Sections: Hero Slider, Service Cards, Mission Statement, Why Choose Us, CTA Banner
 
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import Hero from "@/components/pages/home/Hero";
+import Services from "@/components/pages/home/Services";
+import WhyChooseUs from "@/components/pages/home/WhyChooseUs";
 import CtaBanner from "@/components/layout/CtaBanner";
 export const metadata: Metadata = {
   title: "[Your Company] | Structured Cabling, Security Cameras & VoIP Denver CO",
@@ -12,123 +13,18 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://[Your Company]communications.com" },
 };
 
-// ─── Service Card Data ────────────────────────────────────────────────────────
-const serviceCards = [
-  {
-    icon: "/home/cabling-icon.png",
-    title: "Structured Cabling",
-    subtitle: "CAT5E | CAT6| COAX | FIBER OPTICS",
-    href: "/services/cable-installation",
-  },
-  {
-    icon: "/home/voip-icon.png",
-    title: "AVAYA IP OFFICE SALES & SUPPORT",
-    subtitle: "Hosted Communications | IP OFFICE | PARTNER ACS | MERLIN | LEGEND/MAGIX | DEFINITY",
-    href: "/services/avaya-ip-office",
-  },
-  {
-    icon: "/home/security-icon.png",
-    title: "HIKVISION CCTV SECURITY CAMERAS",
-    subtitle: "CCTV | IP | HIKVISION",
-    href: "/services/security",
-  },
-];
 
-// ─── Why Choose Us Data ───────────────────────────────────────────────────────
-const whyChooseUs = [
-  {
-    title: "Experience YOU Can Trust",
-    body: "With industry-leading certifications and years of hands-on expertise, [Your Company] brings proven knowledge in structured network cabling, surveillance systems, and VoIP phone solutions. We understand what your business needs — and we install it right the first time.",
-    accent: "YOU",
-  },
-  {
-    title: "Premium-Grade Systems & Clean Professional Work",
-    body: "From enterprise-quality structured cabling to Hikvision CCTV and Avaya IP Office VoIP systems, we only use equipment known for performance, security, and longevity. Every install is clean, organized, and built for long-term reliability.",
-  },
-  {
-    title: "Your Business. Always Connected. Always Protected.",
-    body: "Whether you're upgrading your data network, securing your building, or modernizing your communication system, we deliver solutions that improve efficiency, protect your assets, and strengthen your customer experience.",
-  },
-  {
-    title: "Local Service. Big Results.",
-    body: "We take pride in serving Denver Colorado and surrounding regions with personalized support, fast response times, and a commitment to doing the job with integrity. When you call, we answer — and we show up.",
-  },
-];
+
 
 export default function HomePage() {
   return (
     <>
       {/* ── SECTION 1: Hero ──────────────────────────────────────────────── */}
-      <section
-        className="relative fade-in min-h-145 flex items-center justify-start overflow-hidden"
-        aria-label="Hero: Structured Cabling, Security Cameras & VoIP Denver CO"
-      >
-        {/* Background image placeholder — replace src with real Hikvision/cabling image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/home/home-hero.png')" }}
-          aria-hidden="true"
-        />
-        {/* Dark overlay */}
-    
+      <Hero />
+      {/* ── SECTION 2: Service Cards ──────────────────────────────────────── */}
+      <div className="bg-white">
 
-        {/* Hero Content */}
-        <div className="relative z-10 grow px-6 py-20">
-          {/* Badge */}
-          <span className="inline-block bg-brand-gradient text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
-            Serving Denver CO &amp; The Front Range
-          </span>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight max-w-4xl">
-            STRUCTURED CABLING,
-            SECURITY CAMERAS &amp;
-            <br />
-            <span className="text-purple-400">VoIP Phone Systems</span>
-          </h1>
-
-          <div className="mt-8">
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-primary hover:bg-purple-600 text-white font-bold px-6 py-3 rounded-full transition-colors"
-            >
-              Learn More About Us
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-     
-        {/* ── SECTION 2: Service Cards ──────────────────────────────────────── */}
-        <section
-          className="max-w-7xl mx-auto px-6 -mt-16 relative z-10 bg-white"
-          aria-label="Our Services"
-        >
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {serviceCards.map((card) => (
-              <Link
-                key={card.href}
-                href={card.href}
-                className="bg-white rounded-xl shadow-lg p-7 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-200 group"
-                aria-label={`Learn about ${card.title}`}
-              >
-                {/* Icon Circle */}
-                <div className="relative w-22 h-22 rounded-full bg-brand-gradient flex items-center justify-center mb-5 group-hover:bg-purple-800 transition-colors">
-                  <Image  className="object-contain" src={card.icon} alt={`${card.title} Icon`} fill />
-                </div>
-                <h2 className="text-xl font-bold text-gray-900 mb-3 uppercase leading-tight">
-                  {card.title}
-                </h2>
-                {/* Divider */}
-                <div className="w-10 h-0.5 bg-purple-600 mb-3" aria-hidden="true" />
-                <p className="text-sm text-gray-500 uppercase tracking-wide">{card.subtitle}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
+        <Services />
 
         {/* ── SECTION 3: Mission Statement ────────────────────────────────── */}
         <section className="max-w-7xl bg-white mx-auto px-6 py-16" aria-label="Our Mission">
@@ -141,92 +37,15 @@ export default function HomePage() {
             Our commitment is to provide honest guidance, precision installation, and dependable support you can trust day after day.
           </p>
         </section>
-    
+
+      </div>
 
 
       {/* ── SECTION 4: Why Choose Us ──────────────────────────────────────── */}
-      <section className="bg-gray-50 py-16" aria-label="Why Choose [Your Company]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left: Images */}
-            <div className="space-y-6 flex flex-col items-center">
-              {/* Image 1: Security Camera Install */}
-              <div className="rounded-xl relative overflow-hidden shadow-lg bg-gray-200 h-105 w-80 flex items-center justify-center">
-                <Image
-                  src="/home/camera-install.png"
-                  alt="Technician installing a Hikvision security camera"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  fill
-                />
-              </div>
-              {/* Image 2: Cable Installation */}
-              <div className="rounded-xl relative overflow-hidden shadow-lg bg-gray-200 h-105 w-80 flex items-center justify-center">
-                <Image
-                  src="/home/cabling.png"
-                  alt="Professional structured cabling installation in Denver CO"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  fill
-                />
-              </div>
-            </div>
-
-            {/* Right: Why Choose Us Content */}
-            <div>
-              <p className="text-purple-600 text-sm font-semibold uppercase tracking-widest mb-3">
-                Why Choose Us?
-              </p>
-              {whyChooseUs.map((item, index) => (
-                <div key={index} className="mb-8">
-                  <h3 className="text-3xl font-black text-gray-900 mb-3 border-l-4 border-purple-600 pl-4 leading-snug">
-                    {/* Highlight "YOU" in first item */}
-                    {index === 0 ? (
-                      <>
-                        Experience{" "}
-                        <span className="text-secondary">YOU</span>
-                        {" "}Can Trust
-                      </>
-                    ) : (
-                      item.title
-                    )}
-                  </h3>
-                  <p className="text-gray-600 text-md leading-relaxed pl-4">{item.body}</p>
-                </div>
-              ))}
-
-              {/* CTA Row */}
-              <div className="flex items-center gap-6 mt-8">
-                <Link
-                  href="/contact"
-                  className="bg-brand-gradient hover:bg-purple-800 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 transition-colors text-sm"
-                >
-                  Contact Us
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-                <a
-                  href="tel:3036685150"
-                  className="flex items-center gap-2 text-gray-700 hover:text-purple-700 transition-colors font-semibold"
-                  aria-label="Call [Your Company]"
-                >
-                  <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  <span>
-                    <span className="text-xs text-gray-500 block">Call for free</span>
-                    999-999-9999
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <WhyChooseUs />
 
       {/* ── SECTION 5: Bottom CTA Banner ──────────────────────────────────── */}
-      <CtaBanner/>
+      <CtaBanner />
     </>
   );
 }

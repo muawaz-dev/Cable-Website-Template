@@ -39,6 +39,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <div className="bg-white">
 
         {/* ── SECTION 2: About Content ──────────────────────────────────────── */}
         <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="About Harden Communication Services">
@@ -93,9 +94,10 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
         {/* ── SECTION 3: About Our Services (Accordion) ─────────────────────── */}
         <Accordion />
+      </div>
+
       {/* ── SECTION 4: Fiber Optic Banner ─────────────────────────────────── */}
       <section
         className="bg-brand-gradient flex justify-center items-center h-40 py-12 px-6 text-center"

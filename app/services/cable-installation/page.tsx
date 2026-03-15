@@ -40,6 +40,9 @@ export default function CableInstallationPage() {
           </h1>
         </div>
       </section>
+
+      <div className="bg-white">
+
         {/* ── SECTION 2: Structured Cabling Overview ─────────────────────────── */}
         <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="Structured Cabling Services Denver CO">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -90,6 +93,7 @@ export default function CableInstallationPage() {
           <Accordion />
 
         </section>
+      </div>
       
 
 
