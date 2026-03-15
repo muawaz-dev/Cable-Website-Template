@@ -27,15 +27,14 @@ export default function AvayaIPOfficePage() {
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
       <section
-        className="relative bg-red-900 min-h-[220px] flex items-end overflow-hidden"
+        className="relative min-h-80 flex items-end overflow-hidden"
         aria-label="Avaya IP Office Sales and Support Denver CO"
       >
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: "url('/images/avaya-hero.jpg')" }}
+          className="absolute inset-0 bg-cover bg-[30%_48%] bg-no-repeat"
+          style={{ backgroundImage: "url('/services/avaya-hero.png')" }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/50" aria-hidden="true" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-10 pt-20">
           <h1 className="text-3xl md:text-4xl font-black text-white uppercase">

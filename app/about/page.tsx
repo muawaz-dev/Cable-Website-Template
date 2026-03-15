@@ -19,16 +19,15 @@ export default function AboutPage() {
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
       <section
-        className="relative bg-red-900 min-h-[220px] flex items-end overflow-hidden"
+        className="relative min-h-80 flex items-end overflow-hidden"
         aria-label="About Harden Communications Denver CO"
       >
         {/* Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: "url('/images/about-hero.jpg')" }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/about/about-hero.png')" }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/50" aria-hidden="true" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-10 pt-20">
           <h1 className="text-3xl md:text-4xl font-black text-white">

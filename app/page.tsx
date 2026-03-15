@@ -15,34 +15,19 @@ export const metadata: Metadata = {
 // ─── Service Card Data ────────────────────────────────────────────────────────
 const serviceCards = [
   {
-    icon: (
-      // Network/cabling icon
-      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12l4-4m-4 4l4 4M19 12l-4-4m4 4l-4 4" />
-      </svg>
-    ),
+    icon: "/home/cabling-icon.png",
     title: "Structured Cabling",
     subtitle: "CAT5E | CAT6| COAX | FIBER OPTICS",
     href: "/services/cable-installation",
   },
   {
-    icon: (
-      // Phone/office icon
-      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-      </svg>
-    ),
+    icon: "/home/voip-icon.png",
     title: "AVAYA IP OFFICE SALES & SUPPORT",
     subtitle: "Hosted Communications | IP OFFICE | PARTNER ACS | MERLIN | LEGEND/MAGIX | DEFINITY",
     href: "/services/avaya-ip-office",
   },
   {
-    icon: (
-      // Camera icon
-      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.069A1 1 0 0121 8.867v6.266a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: "/home/security-icon.png",
     title: "HIKVISION CCTV SECURITY CAMERAS",
     subtitle: "CCTV | IP | HIKVISION",
     href: "/services/security",
@@ -90,7 +75,7 @@ export default function HomePage() {
         {/* Hero Content */}
         <div className="relative z-10 grow px-6 py-20">
           {/* Badge */}
-          <span className="inline-block bg-purple-600 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
+          <span className="inline-block bg-brand-gradient text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
             Serving Denver CO &amp; The Front Range
           </span>
 
@@ -104,7 +89,7 @@ export default function HomePage() {
           <div className="mt-8">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 bg-purple-700 hover:bg-purple-600 text-white font-bold px-6 py-3 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-primary hover:bg-purple-600 text-white font-bold px-6 py-3 rounded-full transition-colors"
             >
               Learn More About Us
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -131,8 +116,8 @@ export default function HomePage() {
                 aria-label={`Learn about ${card.title}`}
               >
                 {/* Icon Circle */}
-                <div className="w-16 h-16 rounded-full bg-purple-700 flex items-center justify-center mb-5 group-hover:bg-purple-800 transition-colors">
-                  {card.icon}
+                <div className="relative w-22 h-22 rounded-full bg-brand-gradient flex items-center justify-center mb-5 group-hover:bg-purple-800 transition-colors">
+                  <Image  className="object-contain" src={card.icon} alt={`${card.title} Icon`} fill />
                 </div>
                 <h2 className="text-xl font-bold text-gray-900 mb-3 uppercase leading-tight">
                   {card.title}
@@ -166,7 +151,7 @@ export default function HomePage() {
             {/* Left: Images */}
             <div className="space-y-6 flex flex-col items-center">
               {/* Image 1: Security Camera Install */}
-              <div className="rounded-xl relative overflow-hidden shadow-lg bg-gray-200 h-96 w-72 flex items-center justify-center">
+              <div className="rounded-xl relative overflow-hidden shadow-lg bg-gray-200 h-105 w-80 flex items-center justify-center">
                 <Image
                   src="/home/camera-install.png"
                   alt="Technician installing a Hikvision security camera"
@@ -176,7 +161,7 @@ export default function HomePage() {
                 />
               </div>
               {/* Image 2: Cable Installation */}
-              <div className="rounded-xl relative overflow-hidden shadow-lg bg-gray-200 h-96 w-72 flex items-center justify-center">
+              <div className="rounded-xl relative overflow-hidden shadow-lg bg-gray-200 h-105 w-80 flex items-center justify-center">
                 <Image
                   src="/home/cabling.png"
                   alt="Professional structured cabling installation in Denver CO"
@@ -199,7 +184,7 @@ export default function HomePage() {
                     {index === 0 ? (
                       <>
                         Experience{" "}
-                        <span className="text-purple-600">YOU</span>
+                        <span className="text-secondary">YOU</span>
                         {" "}Can Trust
                       </>
                     ) : (
@@ -214,7 +199,7 @@ export default function HomePage() {
               <div className="flex items-center gap-6 mt-8">
                 <Link
                   href="/contact"
-                  className="bg-purple-700 hover:bg-purple-800 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 transition-colors text-sm"
+                  className="bg-brand-gradient hover:bg-purple-800 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 transition-colors text-sm"
                 >
                   Contact Us
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -226,7 +211,7 @@ export default function HomePage() {
                   className="flex items-center gap-2 text-gray-700 hover:text-purple-700 transition-colors font-semibold"
                   aria-label="Call [Your Company]"
                 >
-                  <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   <span>
@@ -242,20 +227,20 @@ export default function HomePage() {
 
       {/* ── SECTION 5: Bottom CTA Banner ──────────────────────────────────── */}
       <section
-        className="bg-gray-900 py-16 px-6"
+        className="bg-gray-900 h-80 sm:h-96 flex py-16 px-6 bg-[url('/home/cta-bg.jpg')] bg-cover bg-center"
         aria-label="Upgrade your network, security, or VoIP service"
       >
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <h2 className="text-xl md:text-3xl font-black text-white text-center md:text-left leading-tight">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-800 text-center md:text-left leading-tight">
             Ready To{" "}
-            <span className="text-purple-400">UPGRADE</span>
+            <span className="text-secondary">UPGRADE</span>
             {" "}Your Network,
             <br />
             Security, Or VOIP Service?
           </h2>
           <Link
             href="/contact"
-            className="flex-shrink-0 bg-purple-700 hover:bg-purple-600 text-white font-black px-8 py-4 rounded-full text-lg transition-colors"
+            className="flex-shrink-0 bg-brand-gradient  text-white font-black px-5 py-3 sm:px-8 sm:py-4 rounded-full text-md sm:text-lg"
           >
             CONTACT US
           </Link>

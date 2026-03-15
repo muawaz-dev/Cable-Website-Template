@@ -5,7 +5,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import Image from "next/image";
 // ─── Service sub-menu items ───────────────────────────────────────────────────
 const serviceLinks = [
   { label: "Cable Installation", href: "/services/cable-installation" },
@@ -86,16 +86,16 @@ export default function Navbar() {
       </div>
 
       {/* ── Main Navbar ───────────────────────────────────────────────────── */}
-      <nav className="bg-white border-b border-gray-200" role="navigation" aria-label="Main navigation">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+      <nav className="bg-white h-22 sm:h-26 border-b border-gray-200" role="navigation" aria-label="Main navigation">
+        <div className="max-w-7xl mx-auto pr-4 flex items-center justify-between h-full">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2" aria-label="Harden Communications Home">
-            <div className="bg-purple-800 text-white font-black text-xl px-3 py-1 rounded-sm tracking-tight">
-              Your
-            </div>
-            <span className="text-xs text-gray-500 leading-tight hidden sm:block">
-              Logo
-            </span>
+          <Link href="/" className="flex relative h-full w-64 items-center gap-2" aria-label="Harden Communications Home">
+            <Image
+            src="/home/logo.png"
+            alt="Harden Communications logo"
+            className="object-cover block"
+            fill
+            />   
           </Link>
 
           {/* Desktop Nav Links */}
@@ -180,7 +180,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/contact"
-              className="bg-purple-700 hover:bg-purple-800 text-white text-sm font-bold px-5 py-2 rounded-full flex items-center gap-1.5 transition-colors"
+              className="bg-brand-gradient hover:bg-purple-800 text-white text-sm font-bold px-5 py-4 rounded-full flex items-center gap-1.5 transition-colors"
             >
               CONTACT US
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
