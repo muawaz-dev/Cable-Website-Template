@@ -4,7 +4,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
+import BusinessAccordion from "@/components/pages/security/BusinessAccordian";
+import HomeAccordion from "@/components/pages/security/HomeAccordion";
+import CtaBanner from "@/components/layout/CtaBanner";
 export const metadata: Metadata = {
   title: "Hikvision CCTV Security Camera Installation Denver CO | [Your Company]",
   description:
@@ -52,7 +54,7 @@ export default function SecurityPage() {
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
       <section
-        className="relative min-h-80 flex items-end overflow-hidden"
+        className="relative fade-in min-h-80 flex items-end overflow-hidden"
         aria-label="Hikvision CCTV Security Camera Installation Denver CO"
       >
         <div
@@ -69,7 +71,7 @@ export default function SecurityPage() {
 
 
       {/* ── SECTION 2: Overview ───────────────────────────────────────────── */}
-      <section className="max-w-7xl bg-white mx-auto px-6 py-14" aria-label="Hikvision Security Camera Overview">
+      <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="Hikvision Security Camera Overview">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-start">
           {/* Left: Image */}
           <div className="rounded-xl flex justify-center items-center overflow-hidden h-full">
@@ -106,9 +108,39 @@ export default function SecurityPage() {
         </div>
       </section>
 
+      {/* ── SECTION 3: Trust and Value Section ──────────────────────────── */}
+      <section className="max-w-7xl bg-white mx-auto px-6 pb-6" aria-label="What Is Structured Cabling">
+        <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-5">
+          We stand firmly behind our products and installation.
+        </h2>
 
+        <p className="text-gray-700 text-md leading-relaxed mb-4">
+          Modern security cameras are no longer a luxury—they’re a vital layer of protection for both homes and businesses
+          . What used to be an expensive option limited to high-value properties has evolved into an affordable and essential tool for
+           safeguarding your family, employees, and assets.
+        </p>
+        <p className="text-gray-700 text-md leading-relaxed mb-4">
+          Today’s <strong>professional security camera systems</strong> offer clearer images, smarter features, 
+          and more reliable performance than ever before. And despite the misconception that expert 
+          installation is costly, most property owners are surprised at how budget-friendly a professionally installed system can be.
+           Law enforcement, fire departments, and first responders consistently emphasize that a well-installed surveillance system is one of the most effective steps you can take to deter crime, document incidents, and protect your property.
+        </p>
+        <p className="text-gray-700 text-md leading-relaxed mb-4">
+         At [Your Company], <strong>we stand firmly behind the products we install 
+         and the workmanship we deliver</strong>. When you choose us, you choose proven 
+         reliability, superior quality, and long-lasting peace of mind.
+        </p>
+      </section>
 
-      {/* ── SECTION 3: Features Grid ──────────────────────────────────────── */}
+      {/* ── SECTION 3: Business Accordion ──────────────────────────────────────── */}
+
+      <BusinessAccordion />
+
+      {/* ── SECTION 4: Home Accordion ──────────────────────────────────────── */}
+
+      <HomeAccordion />
+
+      {/* ── SECTION 5: Features Grid ──────────────────────────────────────── */}
       <section className="bg-gray-50 py-16 px-6" aria-label="CCTV Security Camera Features">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3 text-center">Why Choose Hikvision CCTV?</h2>
@@ -135,15 +167,8 @@ export default function SecurityPage() {
         </div>
       </section>
 
-      {/* ── SECTION 4: Contact CTA ─────────────────────────────────────────── */}
-      <section className="py-12 px-6 flex justify-end max-w-7xl mx-auto" aria-label="Contact [Your Company] for Security">
-        <Link
-          href="/contact"
-          className="bg-purple-700 mx-auto hover:bg-purple-800 text-white font-black px-10 py-4 rounded-full text-lg transition-colors"
-        >
-          CONTACT US
-        </Link>
-      </section>
+      {/* ── SECTION 6: Contact CTA ─────────────────────────────────────────── */}
+      <CtaBanner />
     </>
   );
 }

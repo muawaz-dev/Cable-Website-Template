@@ -4,7 +4,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
+import CtaBanner from "@/components/layout/CtaBanner";
 export const metadata: Metadata = {
   title: "[Your Company] | Structured Cabling, Security Cameras & VoIP Denver CO",
   description:
@@ -60,7 +60,7 @@ export default function HomePage() {
     <>
       {/* ── SECTION 1: Hero ──────────────────────────────────────────────── */}
       <section
-        className="relative min-h-[560px] flex items-center justify-start overflow-hidden bg-red-900"
+        className="relative fade-in min-h-145 flex items-center justify-start overflow-hidden"
         aria-label="Hero: Structured Cabling, Security Cameras & VoIP Denver CO"
       >
         {/* Background image placeholder — replace src with real Hikvision/cabling image */}
@@ -132,7 +132,7 @@ export default function HomePage() {
 
         {/* ── SECTION 3: Mission Statement ────────────────────────────────── */}
         <section className="max-w-7xl bg-white mx-auto px-6 py-16" aria-label="Our Mission">
-          <p className="text-xl font-extrabold text-gray-900 mb-4 leading-relaxed">
+          <p className="text-xl font-extrabold text-gray-900 mb-4 leading-tight">
             At [Your Company], our mission is simple: deliver reliable, secure, and future-ready communication
             solutions that keep your business connected, protected, and running at peak performance.
           </p>
@@ -226,26 +226,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 5: Bottom CTA Banner ──────────────────────────────────── */}
-      <section
-        className="bg-gray-900 h-80 sm:h-96 flex py-16 px-6 bg-[url('/home/cta-bg.jpg')] bg-cover bg-center"
-        aria-label="Upgrade your network, security, or VoIP service"
-      >
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16">
-          <h2 className="text-3xl md:text-4xl font-black text-gray-800 text-center md:text-left leading-tight">
-            Ready To{" "}
-            <span className="text-secondary">UPGRADE</span>
-            {" "}Your Network,
-            <br />
-            Security, Or VOIP Service?
-          </h2>
-          <Link
-            href="/contact"
-            className="flex-shrink-0 bg-brand-gradient  text-white font-black px-5 py-3 sm:px-8 sm:py-4 rounded-full text-md sm:text-lg"
-          >
-            CONTACT US
-          </Link>
-        </div>
-      </section>
+      <CtaBanner/>
     </>
   );
 }

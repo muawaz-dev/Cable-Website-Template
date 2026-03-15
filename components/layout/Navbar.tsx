@@ -6,6 +6,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { log } from "console";
 // ─── Service sub-menu items ───────────────────────────────────────────────────
 const serviceLinks = [
   { label: "Cable Installation", href: "/services/cable-installation" },
@@ -22,6 +23,7 @@ const navLinks = [
 export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [logoLoaded,setLogoLoaded] = useState(false);
   const pathname = usePathname();
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -35,7 +37,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="w-full sticky top-0 z-50 shadow-md">
+    <header className="w-full fade-in sticky top-0 z-50 shadow-md">
       {/* ── Top Info Bar ─────────────────────────────────────────────────── */}
       <div className="bg-gray-900 text-white text-sm py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
@@ -91,9 +93,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex relative h-full w-64 items-center gap-2" aria-label="Harden Communications Home">
             <Image
+            onLoad={()=>setLogoLoaded(true)}
             src="/home/logo.png"
             alt="Harden Communications logo"
-            className="object-cover block"
+            className={`object-cover block ${logoLoaded ? "opacity-100" : "opacity-0" } transition-opacity duration-500`}
             fill
             />   
           </Link>
@@ -214,12 +217,11 @@ export default function Navbar() {
               <p className="py-2 text-sm font-semibold text-gray-700">SERVICES</p>
               {serviceLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="block py-1.5 pl-4 text-sm text-gray-600 hover:text-purple-700" onClick={() => setMobileOpen(false)}>
-                  {link.label}
+                  - {link.label}
                 </Link>
               ))}
             </div>
             <Link href="/about" className="block py-2 text-sm font-semibold text-gray-700 hover:text-purple-700" onClick={() => setMobileOpen(false)}>ABOUT US</Link>
-            <Link href="/blog" className="block py-2 text-sm font-semibold text-gray-700 hover:text-purple-700" onClick={() => setMobileOpen(false)}>Blog</Link>
             <Link href="/contact" className="mt-3 block bg-purple-700 text-white text-center py-2 rounded-full text-sm font-bold" onClick={() => setMobileOpen(false)}>CONTACT US</Link>
           </div>
         )}

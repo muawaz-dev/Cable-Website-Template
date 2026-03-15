@@ -1,10 +1,7 @@
 "use client";
-import AvayaIP from "./accordion-components/AvayaIP";
-import Cabling from "./accordion-components/Cabling";
-import Security from "./accordion-components/Hikvision";
-import Hikvision from "./accordion-components/Hikvision";
 import { useState } from "react";
-
+import SecurityCamera from "./accordion-components/BestSecurityCamera";
+import SurveillanceSolutions from "./accordion-components/SurveillanceSolutions";
 // Define a type for your service items
 interface ServiceItem {
   id: string;
@@ -13,10 +10,8 @@ interface ServiceItem {
 }
 
 const servicesInfo: ServiceItem[] = [
-  { id: "avaya-ip", title: "Avaya IP Office Systems", content: <AvayaIP /> },
-  { id: "cabling", title: "Cabling Services", content: <Cabling /> },
-  { id: "security", title: "Security Services", content: <Security /> },
-  { id: "hikvision", title: "Hikvision CCTV Installation Partner", content: <Hikvision /> },
+  { id: "security-camera", title: "What is the best security camera option for my business?", content: <SecurityCamera /> },
+  { id: "surveillance", title: "Strengthen your business security with advanced surveillance solutions.", content: <SurveillanceSolutions /> },
 ];
 
 export default function Accordion() {
@@ -35,10 +30,10 @@ export default function Accordion() {
   return (
     <section
       className="max-w-7xl bg-white mx-auto px-6 pb-14"
-      aria-label="About Our Services"
+      aria-label="Considering Security for your business?"
     >
-      <h2 className="text-3xl uppercase font-bold text-gray-900 mb-6">
-        ABOUT OUR SERVICES
+      <h2 className="text-3xl font-bold text-gray-900 mb-6 uppercase">
+        Considering Security for your business?
       </h2>
 
       <div className="border border-gray-200 rounded-xl overflow-hidden divide-y divide-gray-200">

@@ -4,6 +4,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import CtaBanner from "@/components/layout/CtaBanner";
 import Accordion from "@/components/pages/cable-installation/Accordion";
 export const metadata: Metadata = {
   title: "Structured Cabling & Cable Installation Denver CO | [Your Company]",
@@ -25,7 +26,7 @@ export default function CableInstallationPage() {
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
       <section
-        className="relative min-h-80 flex items-end overflow-hidden"
+        className="relative fade-in min-h-80 flex items-end overflow-hidden"
         aria-label="Cable Installation Services Denver CO"
       >
         <div
@@ -40,7 +41,7 @@ export default function CableInstallationPage() {
         </div>
       </section>
         {/* ── SECTION 2: Structured Cabling Overview ─────────────────────────── */}
-        <section className="max-w-7xl bg-white mx-auto px-6 py-14" aria-label="Structured Cabling Services Denver CO">
+        <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="Structured Cabling Services Denver CO">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
             <div className="rounded-xl relative overflow-hidden shadow-lg bg-gray-200 h-80">
@@ -86,7 +87,6 @@ export default function CableInstallationPage() {
           </p>
 
           {/* ── Benefits Accordion ───────────────────────────────────────── */}
-          <h3 className="text-3xl font-bold text-gray-900 mb-5">Benefits of Structured Cabling</h3>
           <Accordion />
 
         </section>
@@ -94,14 +94,7 @@ export default function CableInstallationPage() {
 
 
       {/* ── SECTION 4: Contact CTA ─────────────────────────────────────────── */}
-      <section className="py-10 px-6 flex justify-end max-w-7xl mx-auto" aria-label="Contact [Your Company]">
-        <Link
-          href="/contact"
-          className="bg-purple-700 mx-auto hover:bg-purple-800 text-white font-black px-10 py-4 rounded-full text-lg transition-colors"
-        >
-          CONTACT US
-        </Link>
-      </section>
+      <CtaBanner/>
     </>
   );
 }

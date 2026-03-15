@@ -4,6 +4,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import CtaBanner from "@/components/layout/CtaBanner";
 import Accordian from "@/components/pages/avaya-ip/Accordian";
 export const metadata: Metadata = {
   title: "Avaya IP Office Sales & Support Denver CO | [Your Company]",
@@ -27,7 +28,7 @@ export default function AvayaIPOfficePage() {
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
       <section
-        className="relative min-h-80 flex items-end overflow-hidden"
+        className="relative fade-in min-h-80 flex items-end overflow-hidden"
         aria-label="Avaya IP Office Sales and Support Denver CO"
       >
         <div
@@ -44,7 +45,7 @@ export default function AvayaIPOfficePage() {
       </section>
 
       {/* ── SECTION 2: Sales & Support Overview ──────────────────────────── */}
-      <section className="max-w-7xl bg-white mx-auto px-6 py-14" aria-label="Avaya IP Office Sales & Support">
+      <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="Avaya IP Office Sales & Support">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: Image */}
           <div className="rounded-xl flex justify-center items-center overflow-hidden h-full">
@@ -92,7 +93,7 @@ export default function AvayaIPOfficePage() {
       </section>
 
       {/* ── SECTION 3: Smart Business Communication Era ──────────────────── */}
-      <section className="bg-white py-12 px-6" aria-label="New Era of Smart Business Communication">
+      <section className="bg-white px-6" aria-label="New Era of Smart Business Communication">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-5">
             Welcome to the New Era of Smart Business Communication
@@ -118,22 +119,9 @@ export default function AvayaIPOfficePage() {
       </section>
 
       {/* ── SECTION 4: Features Accordion ─────────────────────────────────── */}
-      <section className="max-w-7xl bg-white mx-auto px-6 py-14" aria-label="Avaya IP Office Features">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Features of the AVAYA IP OFFICE</h2>
-
         <Accordian />
-        
-      </section>
-
       {/* ── SECTION 5: Contact CTA ─────────────────────────────────────────── */}
-      <section className="py-10 px-6 flex justify-end max-w-7xl mx-auto" aria-label="Contact for Avaya IP Office">
-        <Link
-          href="/contact"
-          className="bg-purple-700 mx-auto hover:bg-purple-800 text-white font-black px-10 py-4 rounded-full text-lg transition-colors"
-        >
-          CONTACT US
-        </Link>
-      </section>
+      <CtaBanner/>
     </>
   );
 }

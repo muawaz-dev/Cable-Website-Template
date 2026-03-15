@@ -4,6 +4,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import CtaBanner from "@/components/layout/CtaBanner";
 import Accordion from "@/components/pages/about/Accordion";
 export const metadata: Metadata = {
   title: "About Harden Communications | Denver CO Structured Cabling & VoIP Experts",
@@ -19,7 +20,7 @@ export default function AboutPage() {
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
       <section
-        className="relative min-h-80 flex items-end overflow-hidden"
+        className="relative fade-in min-h-80 flex items-end overflow-hidden"
         aria-label="About Harden Communications Denver CO"
       >
         {/* Background */}
@@ -40,7 +41,7 @@ export default function AboutPage() {
 
 
         {/* ── SECTION 2: About Content ──────────────────────────────────────── */}
-        <section className="max-w-7xl bg-white mx-auto px-6 py-14" aria-label="About Harden Communication Services">
+        <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="About Harden Communication Services">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
             <div className="overflow-hidden h-full flex items-center justify-center">
@@ -97,29 +98,16 @@ export default function AboutPage() {
         <Accordion />
       {/* ── SECTION 4: Fiber Optic Banner ─────────────────────────────────── */}
       <section
-        className="bg-purple-700 py-12 px-6 text-center"
+        className="bg-brand-gradient flex justify-center items-center h-40 py-12 px-6 text-center"
         aria-label="Denver Fiber Optic Internet Announcement"
       >
         <p className="text-white font-black text-xl md:text-2xl leading-tight mb-6 max-w-2xl mx-auto uppercase">
-          Fiber optic internet was recently acknowledged by the Denver Mayor and is set to be implemented in the city's most valued public resources
+          We Value Quality And Honour commitment
         </p>
-        <Link
-          href="/blog"
-          className="inline-block bg-gray-900 hover:bg-gray-800 text-white font-bold px-6 py-3 rounded text-sm tracking-widest uppercase transition-colors"
-        >
-          READ ARTICLE HERE
-        </Link>
       </section>
 
       {/* ── SECTION 5: Contact CTA ─────────────────────────────────────────── */}
-      <section className="py-12 px-6 flex justify-end max-w-7xl mx-auto" aria-label="Contact Harden Communications">
-        <Link
-          href="/contact"
-          className="bg-purple-700 mx-auto hover:bg-purple-800 text-white font-black px-10 py-4 rounded-full text-lg transition-colors"
-        >
-          CONTACT US
-        </Link>
-      </section>
+      <CtaBanner/>
     </>
   );
 }

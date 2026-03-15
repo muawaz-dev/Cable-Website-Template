@@ -32,6 +32,22 @@
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+/* Remove default marker from <summary> elements for a cleaner look on ios devices */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
