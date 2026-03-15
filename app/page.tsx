@@ -66,11 +66,11 @@ export default function HomePage() {
         {/* Background image placeholder — replace src with real Hikvision/cabling image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+          style={{ backgroundImage: "url('/home/home-hero.png')" }}
           aria-hidden="true"
         />
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-transparent" aria-hidden="true" />
+    
 
         {/* Hero Content */}
         <div className="relative z-10 grow px-6 py-20">
