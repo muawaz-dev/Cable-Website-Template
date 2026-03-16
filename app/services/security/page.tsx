@@ -4,9 +4,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import BusinessAccordion from "@/components/pages/security/BusinessAccordian";
-import HomeAccordion from "@/components/pages/security/HomeAccordion";
+import BusinessAccordion from "@/components/pages/services/security/BusinessAccordian";
+import HomeAccordion from "@/components/pages/services/security/HomeAccordion";
 import CtaBanner from "@/components/layout/CtaBanner";
+import SecurityHero from "@/components/pages/services/security/Hero";
 export const metadata: Metadata = {
   title: "Hikvision CCTV Security Camera Installation Denver CO | [Your Company]",
   description:
@@ -53,21 +54,7 @@ export default function SecurityPage() {
   return (
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
-      <section
-        className="relative fade-in min-h-80 flex items-end overflow-hidden"
-        aria-label="Hikvision CCTV Security Camera Installation Denver CO"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-[30%_48%] bg-no-repeat"
-          style={{ backgroundImage: "url('/services/security-hero.png')" }}
-          aria-hidden="true"
-        />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-10 pt-20">
-          <h1 className="text-3xl md:text-4xl font-black text-white uppercase">
-            HIKVISION CCTV SECURITY CAMERAS
-          </h1>
-        </div>
-      </section>
+      <SecurityHero/>
 
       <div className="bg-white">
 
@@ -81,7 +68,7 @@ export default function SecurityPage() {
                 src="/services/hikvision-camera.png"
                 alt="Security cameras, headset, network cables — [Your Company] products"
                 className="w-full h-full object-cover rounded-xl"
-                loading="lazy"
+                priority
                 fill
               />
             </div>

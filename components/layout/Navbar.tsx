@@ -95,6 +95,7 @@ export default function Navbar() {
             onLoad={()=>setLogoLoaded(true)}
             src="/home/logo.png"
             alt="Harden Communications logo"
+            priority
             className={`object-cover block ${logoLoaded ? "opacity-100" : "opacity-0" } transition-opacity duration-500`}
             fill
             />   

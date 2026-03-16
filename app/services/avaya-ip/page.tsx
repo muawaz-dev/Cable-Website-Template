@@ -4,8 +4,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import AvayaHero from "@/components/pages/services/avaya-ip/Hero";
 import CtaBanner from "@/components/layout/CtaBanner";
-import Accordian from "@/components/pages/avaya-ip/Accordian";
+import Accordian from "@/components/pages/services/avaya-ip/Accordian";
 export const metadata: Metadata = {
   title: "Avaya IP Office Sales & Support Denver CO | [Your Company]",
   description:
@@ -27,22 +28,7 @@ export default function AvayaIPOfficePage() {
   return (
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
-      <section
-        className="relative fade-in min-h-80 flex items-end overflow-hidden"
-        aria-label="Avaya IP Office Sales and Support Denver CO"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-[30%_48%] bg-no-repeat"
-          style={{ backgroundImage: "url('/services/avaya-hero.png')" }}
-          aria-hidden="true"
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-10 pt-20">
-          <h1 className="text-3xl md:text-4xl font-black text-white uppercase">
-            AVAYA IP OFFICE
-          </h1>
-        </div>
-      </section>
+      <AvayaHero />
 
       <div className="bg-white">
 
@@ -56,7 +42,7 @@ export default function AvayaIPOfficePage() {
                 src="/services/office-working.jpeg"
                 alt="Security cameras, headset, network cables — [Your Company] products"
                 className="w-full h-full object-cover rounded-xl"
-                loading="lazy"
+                priority
                 fill
               />
             </div>

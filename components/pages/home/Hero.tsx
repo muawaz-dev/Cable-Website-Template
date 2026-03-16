@@ -35,10 +35,10 @@ export default function Hero() {
                 aria-label="Hero: Structured Cabling, Security Cameras & VoIP Denver CO"
             >
                 {/* Background image placeholder — replace src with real Hikvision/cabling image */}
-                <div
+                {/* <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     aria-hidden="true"
-                />
+                /> */}
 
                 <Image
                     src="/home/home-hero.png"
@@ -46,6 +46,7 @@ export default function Hero() {
                     className={`block object-cover object-center`}
                     fill
                     onLoad={() => setImageLoaded(true)}
+                    priority
                 />
 
                 {/* Hero Content */}

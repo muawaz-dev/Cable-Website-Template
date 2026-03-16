@@ -4,6 +4,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import AboutHero from "@/components/pages/about/AboutHero";
 import CtaBanner from "@/components/layout/CtaBanner";
 import Accordion from "@/components/pages/about/Accordion";
 export const metadata: Metadata = {
@@ -19,25 +20,7 @@ export default function AboutPage() {
   return (
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
-      <section
-        className="relative fade-in min-h-80 flex items-end overflow-hidden"
-        aria-label="About Harden Communications Denver CO"
-      >
-        {/* Background */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/about/about-hero.png')" }}
-          aria-hidden="true"
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-10 pt-20">
-          <h1 className="text-3xl md:text-4xl font-black text-white">
-            ABOUT HARDEN COMMUNICATIONS,
-            <br />
-            DENVER CO
-          </h1>
-        </div>
-      </section>
+      <AboutHero />
 
       <div className="bg-white">
 

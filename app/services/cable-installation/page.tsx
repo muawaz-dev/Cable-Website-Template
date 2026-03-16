@@ -4,8 +4,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import CableHero from "@/components/pages/services/cable-installation/Hero";
 import CtaBanner from "@/components/layout/CtaBanner";
-import Accordion from "@/components/pages/cable-installation/Accordion";
+import Accordion from "@/components/pages/services/cable-installation/Accordion";
 export const metadata: Metadata = {
   title: "Structured Cabling & Cable Installation Denver CO | [Your Company]",
   description:
@@ -25,22 +26,8 @@ export default function CableInstallationPage() {
   return (
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
-      <section
-        className="relative fade-in min-h-80 flex items-end overflow-hidden"
-        aria-label="Cable Installation Services Denver CO"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-[30%_48%] bg-no-repeat"
-          style={{ backgroundImage: "url('/services/cabling-hero.png')" }}
-          aria-hidden="true"
-        />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-10 pt-20">
-          <h1 className="text-3xl md:text-4xl font-black text-white uppercase">
-            CABLE INSTALLATION
-          </h1>
-        </div>
-      </section>
-
+      
+      <CableHero/>
       <div className="bg-white">
 
         {/* ── SECTION 2: Structured Cabling Overview ─────────────────────────── */}
@@ -52,7 +39,7 @@ export default function CableInstallationPage() {
                 src="/services/cabling-work.png"
                 alt="Technicians performing structured cabling installation in a commercial building in Denver CO"
                 className="w-full h-full object-cover"
-                loading="lazy"
+                priority
                 fill
               />
             </div>
