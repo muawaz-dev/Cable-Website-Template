@@ -2,8 +2,7 @@
 // Sections: Hero Banner, About Content, Services Accordion, Fiber Optic Banner, CTA
 
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import AboutImage from "@/components/pages/about/AboutImage";
 import AboutHero from "@/components/pages/about/AboutHero";
 import CtaBanner from "@/components/layout/CtaBanner";
 import Accordion from "@/components/pages/about/Accordion";
@@ -28,17 +27,8 @@ export default function AboutPage() {
         <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="About Harden Communication Services">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
-            <div className="overflow-hidden h-full flex items-center justify-center">
-              <div className="shadow-lg bg-gray-100 rounded-xl relative h-96 w-full" >
-                <Image
-                  src="/about/about-products.png"
-                  alt="Security cameras, headset, network cables — Harden Communications products"
-                  className="w-full h-full object-cover rounded-xl"
-                  loading="lazy"
-                  fill
-                />
-              </div>
-            </div>
+            
+            <AboutImage />
 
             {/* Right: Text */}
             <div>

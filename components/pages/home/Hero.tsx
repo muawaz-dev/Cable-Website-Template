@@ -33,7 +33,7 @@ export default function Hero() {
         <>
             {/* ── SECTION 1: Hero ──────────────────────────────────────────────── */}
             <section
-                className={`relative ${imageLoaded ? 'fade-in' : 'opacity-0'} min-h-145 flex items-center justify-start overflow-hidden`}
+                className={`relative ${imageLoaded ? 'fade-in' : 'opacity-0'} sm:mb-0 mb-12 min-h-155 flex items-center justify-start overflow-hidden`}
                 aria-label="Hero: Structured Cabling, Security Cameras & VoIP Denver CO"
             >
                 {/* Background image placeholder — replace src with real Hikvision/cabling image */}

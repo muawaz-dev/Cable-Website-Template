@@ -2,8 +2,7 @@
 // Sections: Hero Banner, Structured Cabling Overview, Benefits Accordion, CTA
 
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import CablingImage from "@/components/pages/services/cable-installation/Image";
 import CableHero from "@/components/pages/services/cable-installation/Hero";
 import CtaBanner from "@/components/layout/CtaBanner";
 import Accordion from "@/components/pages/services/cable-installation/Accordion";
@@ -26,24 +25,16 @@ export default function CableInstallationPage() {
   return (
     <>
       {/* ── SECTION 1: Hero Banner ────────────────────────────────────────── */}
-      
-      <CableHero/>
+
+      <CableHero />
       <div className="bg-white">
 
         {/* ── SECTION 2: Structured Cabling Overview ─────────────────────────── */}
         <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="Structured Cabling Services Denver CO">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
-            <div className="rounded-xl relative overflow-hidden shadow-lg bg-gray-200 h-80">
-              <Image
-                src="/services/cabling-work.png"
-                alt="Technicians performing structured cabling installation in a commercial building in Denver CO"
-                className="w-full h-full object-cover"
-                priority
-                fill
-              />
-            </div>
 
+            <CablingImage />
             {/* Right: Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-5 uppercase">STRUCTURED CABLING</h2>
@@ -81,11 +72,11 @@ export default function CableInstallationPage() {
 
         </section>
       </div>
-      
+
 
 
       {/* ── SECTION 4: Contact CTA ─────────────────────────────────────────── */}
-      <CtaBanner/>
+      <CtaBanner />
     </>
   );
 }

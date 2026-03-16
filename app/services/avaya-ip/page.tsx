@@ -2,8 +2,7 @@
 // Sections: Hero Banner, Sales & Support Overview, Smart Business Era, Features Accordion, CTA
 
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import AvayaImage from "@/components/pages/services/avaya-ip/Image";
 import AvayaHero from "@/components/pages/services/avaya-ip/Hero";
 import CtaBanner from "@/components/layout/CtaBanner";
 import Accordian from "@/components/pages/services/avaya-ip/Accordian";
@@ -36,17 +35,7 @@ export default function AvayaIPOfficePage() {
       <section className="max-w-7xl fade-in bg-white mx-auto px-6 py-14" aria-label="Avaya IP Office Sales & Support">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: Image */}
-          <div className="rounded-xl flex justify-center items-center overflow-hidden h-full">
-            <div className="shadow-lg bg-gray-100 rounded-xl relative h-96 w-full" >
-              <Image
-                src="/services/office-working.jpeg"
-                alt="Security cameras, headset, network cables — [Your Company] products"
-                className="w-full h-full object-cover rounded-xl"
-                priority
-                fill
-              />
-            </div>
-          </div>
+          <AvayaImage />
 
           {/* Right: Text */}
           <div>
