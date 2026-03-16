@@ -8,24 +8,26 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero() {
     const [imageLoaded, setImageLoaded] = useState(false);
     useEffect(() => {
-    gsap.fromTo(
-      ".hero-text",
-      { opacity: 0, y: 50 }, // start below and invisible
-      {
-        opacity: 1,
-        y: 0,                 // end at normal position
-        duration: 1.5,
-        stagger: 0.4,         // each text animates after the other
-        delay: 0.4,           // slight delay before animation starts
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".hero-text", // or a parent container
-          start: "top 80%",      // when hero enters viewport
-          toggleActions: "play none none none",
-        },
-      }
-    );
-  }, []);
+    if (imageLoaded) {
+      gsap.fromTo(
+        ".hero-text",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          stagger: 0.4,
+          delay: 0.4,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".hero-text",
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+  }, [imageLoaded]);
 
     return (
         <>
